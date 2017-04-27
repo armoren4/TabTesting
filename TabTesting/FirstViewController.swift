@@ -10,14 +10,21 @@ import UIKit
 import AudioToolbox
 import AVFoundation
 
+struct myVariable {
+    static var yourVariable = 0
+}
+
 class FirstViewController: UIViewController, UITextFieldDelegate {
+    
+    
     
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
-    var pressed1 = false
-    var pressed2 = false
-    var pressed3 = false
+
+    var vibration = false
+    var sound = false
+    var lights = false
     let soundID: SystemSoundID = 1016
     
     var counter:Int = 0 {
@@ -116,31 +123,35 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     // MARK: Feedback Selection
 
     @IBAction func VButton(_ sender: UIButton) {
-        if !pressed1 {
-            pressed1 = true
+        if !vibration {
+            vibration = true
             sender.setImage(#imageLiteral(resourceName: "graybutton"), for:UIControlState.normal)
+            myVariable.yourVariable = 0
+
+            
         } else {
-            pressed1 = false
+            vibration = false
             sender.setImage(#imageLiteral(resourceName: "checkbutton"), for:UIControlState.normal)
+            myVariable.yourVariable = 1
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
         }
     }
     @IBAction func SButton(_ sender: UIButton) {
-        if !pressed2 {
-            pressed2 = true
+        if !sound {
+            sound = true
             sender.setImage(#imageLiteral(resourceName: "graybutton"), for:UIControlState.normal)
         } else {
-            pressed2 = false
+            sound = false
             sender.setImage(#imageLiteral(resourceName: "checkbutton"), for:UIControlState.normal)
             AudioServicesPlaySystemSound(1326)
         }
     }
     @IBAction func LButton(_ sender: UIButton) {
-        if !pressed3 {
-            pressed3 = true
+        if !lights {
+            lights = true
             sender.setImage(#imageLiteral(resourceName: "graybutton"), for:UIControlState.normal)
         } else {
-            pressed3 = false
+            lights = false
             sender.setImage(#imageLiteral(resourceName: "checkbutton"), for:UIControlState.normal)
             blinkscreen()
         }
