@@ -60,7 +60,7 @@ class FourthViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDel
         beanManager!.delegate = self
         
         // Update the name label.
-        tempLabel.text = yourBean?.name ?? "Unknown"
+        tempLabel.text = yourBean?.name ?? ""
         
         // Add pull-to-refresh control.
         refreshControl.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
