@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		371F2DB4D46D1BB7C229F3A8 /* Pods_TabTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEEE13200069ACE2EE362A0 /* Pods_TabTesting.framework */; };
+		485731B11EB1C77600DB9C10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485731B01EB1C77600DB9C10 /* ViewController.swift */; };
 		81A553B6DC274D1A9F278F1B /* Pods_TabTestingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40C1669232E78126DA0816 /* Pods_TabTestingUITests.framework */; };
 		F21D853F1E70D3CA00C16587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D853E1E70D3CA00C16587 /* AppDelegate.swift */; };
 		F21D85411E70D3CA00C16587 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D85401E70D3CA00C16587 /* FirstViewController.swift */; };
@@ -16,6 +17,8 @@
 		F21D85481E70D3CA00C16587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21D85471E70D3CA00C16587 /* Assets.xcassets */; };
 		F21D854B1E70D3CA00C16587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21D85491E70D3CA00C16587 /* LaunchScreen.storyboard */; };
 		F21D85561E70D3CA00C16587 /* TabTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D85551E70D3CA00C16587 /* TabTestingUITests.swift */; };
+		F25BB2411EA135DC0069B4EE /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25BB2401EA135DC0069B4EE /* TemperatureView.swift */; };
+		F25BB2451EA1393E0069B4EE /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25BB2441EA1393E0069B4EE /* UIColor+CustomColors.swift */; };
 		F27EDD831E81CCD4000EDCCB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDD821E81CCD4000EDCCB /* ThirdViewController.swift */; };
 		F27EDD851E81CD3C000EDCCB /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EDD841E81CD3C000EDCCB /* FourthViewController.swift */; };
 		F2C5F3951E834692007CBDFA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F3941E834692007CBDFA /* CustomCell.swift */; };
@@ -33,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		2D40C1669232E78126DA0816 /* Pods_TabTestingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabTestingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		485731B01EB1C77600DB9C10 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6CEEE13200069ACE2EE362A0 /* Pods_TabTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA0AFE3CE1ABD58D238369A /* Pods-TabTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabTesting/Pods-TabTesting.debug.xcconfig"; sourceTree = "<group>"; };
 		A3239CEFBA3A80880EF14DC1 /* Pods-TabTestingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabTestingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabTestingUITests/Pods-TabTestingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		F21D85511E70D3CA00C16587 /* TabTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21D85551E70D3CA00C16587 /* TabTestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTestingUITests.swift; sourceTree = "<group>"; };
 		F21D85571E70D3CA00C16587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F25BB2401EA135DC0069B4EE /* TemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		F25BB2441EA1393E0069B4EE /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		F27EDD821E81CCD4000EDCCB /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = ../ThirdViewController.swift; sourceTree = "<group>"; };
 		F27EDD841E81CD3C000EDCCB /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		F2C5F3941E834692007CBDFA /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -109,15 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				F21D85401E70D3CA00C16587 /* FirstViewController.swift */,
-				F21D85421E70D3CA00C16587 /* SecondViewController.swift */,
+				485731B01EB1C77600DB9C10 /* ViewController.swift */,
 				F2C5F3941E834692007CBDFA /* CustomCell.swift */,
 				F27EDD821E81CCD4000EDCCB /* ThirdViewController.swift */,
 				F27EDD841E81CD3C000EDCCB /* FourthViewController.swift */,
+				F25BB2441EA1393E0069B4EE /* UIColor+CustomColors.swift */,
 				F21D853E1E70D3CA00C16587 /* AppDelegate.swift */,
 				F21D85441E70D3CA00C16587 /* Main.storyboard */,
+				F25BB2401EA135DC0069B4EE /* TemperatureView.swift */,
 				F21D85471E70D3CA00C16587 /* Assets.xcassets */,
 				F21D85491E70D3CA00C16587 /* LaunchScreen.storyboard */,
 				F21D854C1E70D3CA00C16587 /* Info.plist */,
+				F21D85421E70D3CA00C16587 /* SecondViewController.swift */,
 			);
 			path = TabTesting;
 			sourceTree = "<group>";
@@ -346,9 +355,12 @@
 			files = (
 				F21D85431E70D3CA00C16587 /* SecondViewController.swift in Sources */,
 				F21D853F1E70D3CA00C16587 /* AppDelegate.swift in Sources */,
+				F25BB2451EA1393E0069B4EE /* UIColor+CustomColors.swift in Sources */,
+				485731B11EB1C77600DB9C10 /* ViewController.swift in Sources */,
 				F27EDD831E81CCD4000EDCCB /* ThirdViewController.swift in Sources */,
 				F21D85411E70D3CA00C16587 /* FirstViewController.swift in Sources */,
 				F2C5F3951E834692007CBDFA /* CustomCell.swift in Sources */,
+				F25BB2411EA135DC0069B4EE /* TemperatureView.swift in Sources */,
 				F27EDD851E81CD3C000EDCCB /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +502,7 @@
 				DEVELOPMENT_TEAM = BK265TY4RG;
 				INFOPLIST_FILE = TabTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.asu.armoren4.TabTesting;
+				PRODUCT_BUNDLE_IDENTIFIER = TabTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -505,7 +517,7 @@
 				DEVELOPMENT_TEAM = BK265TY4RG;
 				INFOPLIST_FILE = TabTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.asu.armoren4.TabTesting;
+				PRODUCT_BUNDLE_IDENTIFIER = TabTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
