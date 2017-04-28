@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.soundValue.text = "value is " + String(myVariable.yourVariable)
+        //self.soundValue.text = "value is " + String(myVibration.yourVibration)
     }
     
     
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     @IBAction func RandomNumber(_ sender: Any) {
         timer?.invalidate()
 
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(temp), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(feedback), userInfo: nil, repeats: true)
         
     }
     
@@ -72,23 +72,80 @@ class ViewController: UIViewController {
         
         timer!.invalidate()
         timer = nil
-        labelStop.text = "fuck this"
+        //labelStop.text = "fuck this"
 
     }
     
     // check selector -- using action function instead
-    func temp(){
-        let number = arc4random_uniform(30) + 15  // (max value) + min value
-        Label.text = "\(number)"
-        if number <= 20
+    func feedback(){
+        
+        if myLights.yourLights == 1
         {
-            Label2.text = "Step is too short"
-        }
+            let number = arc4random_uniform(30) + 15  // (max value) + min value
+            Label.text = "\(number)"
+            if number <= 20
+            {
+                Label2.text = "Step is too short"
+            }
             
-        else
-        {
-            Label2.text = "Good step"
+            else
+            {
+                Label2.text = "Good step"
+            }
         }
+       
+        if myLights.yourLights == 1
+        {
+            let number = arc4random_uniform(30) + 15  // (max value) + min value
+            Label.text = "\(number)"
+            if number <= 20
+            {
+                blinkscreen()
+                Label2.text = "Step is too short"
+            }
+                
+            else
+            {
+                Label2.text = "Good step"
+            }
+        }
+        
+        if mySound.yourSound == 1
+        {
+            let number = arc4random_uniform(30) + 15  // (max value) + min value
+            Label.text = "\(number)"
+            if number <= 20
+            {
+                AudioServicesPlaySystemSound (1326)
+                Label2.text = "Step is too short"
+            }
+                
+            else
+            {
+                Label2.text = "Good step"
+            }
+        }
+        
+        if myVibration.yourVibration == 1
+        {
+            let number = arc4random_uniform(30) + 15  // (max value) + min value
+            Label.text = "\(number)"
+            if number <= 20
+            {
+                AudioServicesPlaySystemSound (kSystemSoundID_Vibrate)
+                Label2.text = "Step is too short"
+            }
+                
+            else
+            {
+                Label2.text = "Good step"
+            }
+        }
+        
+
+        
+        
+        
     }
     
     
@@ -125,8 +182,24 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    func blinkscreen(){
+        if let wnd = self.view {
+            var v = UIView(frame: wnd.bounds)
+            v.backgroundColor = UIColor(red: 0.44, green: 0.87, blue:0.83, alpha:1.0)
+            v.alpha = 1
+            
+            wnd.addSubview(v)
+            UIView.animate(withDuration: 0.5, animations: { v.alpha = 0.0}, completion: {(finished:Bool) in
+                print("inside")
+                v.removeFromSuperview() })
+}
 }
     
+    
+}
+
+
 
 
 

@@ -10,8 +10,16 @@ import UIKit
 import AudioToolbox
 import AVFoundation
 
-struct myVariable {
-    static var yourVariable = 0
+struct myVibration {
+    static var yourVibration = 0
+}
+
+struct mySound {
+    static var yourSound = 0
+}
+
+struct myLights {
+    static var yourLights = 0
 }
 
 class FirstViewController: UIViewController, UITextFieldDelegate {
@@ -126,23 +134,27 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         if !vibration {
             vibration = true
             sender.setImage(#imageLiteral(resourceName: "graybutton"), for:UIControlState.normal)
-            myVariable.yourVariable = 0
+            myVibration.yourVibration = 0
 
             
         } else {
             vibration = false
             sender.setImage(#imageLiteral(resourceName: "checkbutton"), for:UIControlState.normal)
-            myVariable.yourVariable = 1
+            myVibration.yourVibration = 1
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
         }
     }
+    
     @IBAction func SButton(_ sender: UIButton) {
         if !sound {
             sound = true
+            mySound.yourSound = 0
             sender.setImage(#imageLiteral(resourceName: "graybutton"), for:UIControlState.normal)
+            
         } else {
             sound = false
             sender.setImage(#imageLiteral(resourceName: "checkbutton"), for:UIControlState.normal)
+            mySound.yourSound = 1
             AudioServicesPlaySystemSound(1326)
         }
     }
@@ -150,10 +162,14 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         if !lights {
             lights = true
             sender.setImage(#imageLiteral(resourceName: "graybutton"), for:UIControlState.normal)
+            myLights.yourLights = 0
+
         } else {
             lights = false
             sender.setImage(#imageLiteral(resourceName: "checkbutton"), for:UIControlState.normal)
             blinkscreen()
+            myLights.yourLights = 1
+
         }
     }
     
